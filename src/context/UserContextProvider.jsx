@@ -7,14 +7,15 @@ export const UserContext = createContext();
 
 const UserContextProvider = ({ children }) => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(false);
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
     const fetchAPI = async () => {
-      setUsers(await getUsers(currentPage));
+      setUsers(await getUsers(currentPage, totalPages));
     };
     fetchAPI();
-  }, [currentPage]);
+  }, [currentPage, totalPages]);
 
   return (
     <UserContext.Provider
@@ -22,6 +23,8 @@ const UserContextProvider = ({ children }) => {
         users: users,
         setCurrentPage: setCurrentPage,
         currentPage: currentPage,
+        setTotalPages: setTotalPages,
+        setUsers: setUsers,
       }}
     >
       {children}

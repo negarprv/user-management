@@ -15,14 +15,15 @@ const Table = () => {
   const users = data.users;
   const setCurrentPage = data.setCurrentPage;
   const currentPage = data.currentPage;
+  console.log(users);
 
   return (
     <div className={styles.container}>
       <Header titles={["Image", "Name", "Email"]} />
       <div className={styles.tableBody}>
-        {users.data.map((user) => (
-          <TableRow key={user.id} data={user} />
-        ))}
+        {users.data
+          ? users.data.map((user) => <TableRow key={user.id} data={user} />)
+          : users.map((user) => <TableRow key={user.id} data={user} />)}
       </div>
 
       <Pagination

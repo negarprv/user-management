@@ -19,7 +19,7 @@ const Pagination = ({ currentPage, total, limit, onPageChange, pageCount }) => {
 
       <ul className={styles.pagination}>
         <li>
-          <spna className={styles.page_link}>«</spna>
+          <span className={styles.page_link}>«</span>
         </li>
         {pages.map((page) => (
           <PaginationItem
@@ -30,7 +30,7 @@ const Pagination = ({ currentPage, total, limit, onPageChange, pageCount }) => {
           />
         ))}
         <li>
-          <spna className={styles.page_link}>»</spna>
+          <span className={styles.page_link}>»</span>
         </li>
       </ul>
     </div>
