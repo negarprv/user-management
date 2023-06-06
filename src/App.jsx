@@ -1,7 +1,14 @@
-import "./App.css";
+import UserManagement from "./components/UserManagement";
 
-function App() {
-  return <></>;
-}
+//context
+import UserContextProvider from "./context/UserContextProvider";
+
+const App = () => {
+  return (
+    <UserContextProvider>
+      <UserManagement />
+    </UserContextProvider>
+  );
+};
 
 export default App;
