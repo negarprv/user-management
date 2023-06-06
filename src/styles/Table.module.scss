@@ -1,0 +1,17 @@
+@import "./variables";
+
+.container {
+  background-color: $secondary-color;
+  height: 65vh;
+  width: 90%;
+  border-radius: 8px;
+
+  @media screen and (max-width: 700px) {
+    height: 75vh;
+  }
+}
+
+.tableBody {
+  height: 401px;
+  overflow-y: auto;
+}

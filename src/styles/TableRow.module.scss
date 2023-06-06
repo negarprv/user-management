@@ -1,0 +1,57 @@
+@import "./variables";
+@import "./mixins";
+
+.container {
+  @include rowGrid;
+  border-bottom: 1px solid $border-color2;
+  transition: all 0.3s;
+
+  input {
+    width: $icon-size-big;
+    height: $icon-size-big;
+
+    @media screen and (max-width: 400px) {
+      width: $icon-size-md;
+      height: $icon-size-md;
+    }
+  }
+
+  input[type="checkbox"] {
+    accent-color: $primary-color;
+  }
+
+  img {
+    height: $img-size;
+    width: $img-size;
+    border-radius: 20px;
+    box-shadow: 0px 2px 2px 0px #0000001a;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.1));
+    cursor: default;
+
+    @media screen and (max-width: 400px) {
+      height: $img-size-sm;
+      width: $img-size-sm;
+    }
+  }
+
+  p {
+    font-family: "Poppins";
+    font-size: $text-size-xs;
+    font-weight: 400;
+    line-height: 22px;
+    color: $text-color-light;
+    cursor: default;
+
+    @media screen and (max-width: 700px) {
+      font-size: $text-size-xxs;
+    }
+
+    @media screen and (max-width: 400px) {
+      font-size: $text-size-xxxs;
+    }
+  }
+}
+
+.container:hover {
+  background-color: $hover-color;
+}

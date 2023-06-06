@@ -10,13 +10,18 @@ import { UserContext } from "../context/UserContextProvider";
 //css
 import styles from "../styles/UserManagment.module.scss";
 
+//loading
+import spinner from "../assets/loadingSpinner.svg";
+
 const UserManagement = () => {
-  const users = useContext(UserContext);
+  const data = useContext(UserContext);
+  const users = data.users;
   console.log(users);
+  // console.log(setCurrentPage);
   return (
     <div className={styles.container}>
       {users.length == 0 ? (
-        <p>loading</p>
+        <img src={spinner} alt="Loading..." />
       ) : (
         <>
           <Navbar />

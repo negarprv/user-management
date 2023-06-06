@@ -1,0 +1,81 @@
+@import "./variables";
+
+.container {
+  border-top: 2px solid $border-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 15px 19px;
+
+  p:first-of-type {
+    font-family: "Poppins";
+    font-size: $text-size-xs;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    color: $text-color-light;
+
+    @media screen and (max-width: 700px) {
+      font-size: $text-size-xs;
+    }
+
+    @media screen and (max-width: 500px) {
+      font-size: $text-size-xxs;
+    }
+
+    @media screen and (max-width: 400px) {
+      font-size: $text-size-xxxs;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.page_item {
+  &.active .page_link,
+  &.active .page_link:focus,
+  &.active .page_link:hover {
+    color: #fff;
+    cursor: pointer;
+    background-color: $primary-color;
+  }
+
+  &.disabled .page_link,
+  &.disabled .page_link:focus,
+  &.disabled .page_link:hover {
+    color: $text-color-dark2;
+    cursor: pointer;
+    background-color: #fff;
+  }
+}
+
+.page_link {
+  color: $text-color-dark2;
+  text-decoration: none;
+  background-color: #fff;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 500px) {
+    font-size: $text-size-xs;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: $text-size-xxs;
+    width: 25px;
+    height: 25px;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $pagination-color;
+  }
+}

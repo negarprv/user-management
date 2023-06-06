@@ -8,21 +8,37 @@ $primary-color: #dc3545;
 $secondary-color: #ffffff;
 
 $add-btn: #233eae;
-$hover-color: #f5f5f5;
-$icon-color: #969da2;
+$hover-color: #efefef;
+$icon-color: invert(65%) sepia(14%) saturate(143%) hue-rotate(162deg)
+  brightness(93%) contrast(88%);
 $border-color: #dfdfdf;
+$border-color2: #efefef;
 $pagination-color: #dfdfdf;
 $search-color: #f8f9fa;
 
 $text-size-lg: 20px;
-$text-size-md: 18px;
-$text-size-sm: 16px;
+$text-size-md: 16px;
+$text-size-sm: 15px;
 $text-size-xs: 14px;
-// $title-text-size: 20px;
-// $amount-text-size: 18px;
-// $btn-text-size: 16px;
-// $header-text-size: 14px;
-// $data-text-size: 14px;
-// $search-text-size: 14px;
+$text-size-xxs: 12px;
+$text-size-xxxs: 10px;
+
 $img-size: 36px;
-$icon-size-big: 17.49px;
+$img-size-sm: 30px;
+$icon-size-big: 20px;
+$icon-size-md: 17px;
+
+$table-grid: 5% 8% 52% 33.2%;
+$table-grid-700: 10% 16% 40.8% 33.2%;
+$table-grid-500: 10% 15% 1fr 1fr;
+
+// @media (max-width: 700px) {
+//   $text-size-lg: 18px;
+//   $text-size-md: 15px;
+//   $text-size-sm: 14px;
+//   $text-size-xs: 13px;
+
+//   $img-size: 30px;
+
+//   $table-grid: 10% 16% 40.8% 33.2%;
+// }

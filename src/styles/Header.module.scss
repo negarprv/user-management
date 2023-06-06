@@ -1,0 +1,32 @@
+@import "./variables";
+@import "./mixins";
+
+.container {
+  @include rowGrid;
+  border-bottom: 2px solid $border-color;
+
+  input {
+    width: $icon-size-big;
+    height: $icon-size-big;
+    appearance: none;
+    border: 1px solid $border-color;
+
+    @media screen and (max-width: 400px) {
+      width: $icon-size-md;
+      height: $icon-size-md;
+    }
+  }
+
+  p {
+    font-family: "Roboto";
+    font-size: $text-size-xs;
+    font-weight: 500;
+    line-height: 22px;
+    color: $text-color-dark1;
+    cursor: default;
+
+    @media screen and (max-width: 400px) {
+      font-size: $text-size-xxs;
+    }
+  }
+}
