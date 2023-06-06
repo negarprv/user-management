@@ -38,8 +38,6 @@ const Navbar = () => {
     if (searchedUsers.length !== 0) {
       setUsers(searchedUsers);
     }
-
-    console.log(searchedUsers);
   };
 
   return (
